@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>用户中心</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1,initial-scale=1,user-scalable=no" />
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+<section>
+    <!--    上顶部-->
+    <div class="top-bar hidden-xs visible-lg text-muted">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 top-bar-1 text-center">
+                    <a href="#" class="about">
+                        <i class="glyphicon glyphicon-phone"></i>
+                        <span class="">关注微信号</span>
+                        <span class="glyphicon glyphicon-triangle-bottom"></span>
+                        <img  id="about_img" src="images/guanyu.jpg" width="200px">
+                    </a>
+                </div>
+                <div class="col-md-4 top-bar-2 text-center">
+                    <i class="glyphicon glyphicon-earphone"></i>
+                    <span class="">888-555-55555（服务时间:9:00-21:00）</span>
+                </div>
+                <div class="col-md-2 top-bar-3 text-center">泉州经贸</div>
+                <div class="col-md-3 text-center">
+                    <a class="btn btn-info regist btn-sm">注册</a>
+
+                    <a href="index.html">返回首页</a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- 手机底部导航栏 -->
+<nav class="navbar navbar-default navbar-fixed-bottom visible-xs">
+    <div class="container-fluid">
+        <div class="container">
+            <div class="row">
+                <ul class="nav navbar-nav text-center" id="bottom-nav">
+                    <li class="col-xs-4  " ><a href="index.html" class="glyphicon glyphicon-home" ></a></li>
+                    <li  class="col-xs-4"><a href="shopcar.html" class="glyphicon glyphicon-shopping-cart"></a></li>
+                    <li  class="col-xs-4 active"><a href="PErsonalCenter.html" class="glyphicon glyphicon-user"></a></li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</nav>
+
+<!-- 细节栏-->
+<header>
+    <div class="container user">
+        <div class="row">
+            <div class="col-md-8 col-xs-9">
+                <ul class="touxiang">
+                    <li> <img src="images/touxiang.jpeg" width="100" class="img-circle img-responsive" alt=""></li>
+                    <li>
+                        <span  class="btn btn-default btn-sm">用户名:<span>admin</span></span><br>
+                        <a href="EditPersonalCenter.html" target="_blank" class="glyphicon glyphicon-cog btn btn-info btn-sm">设置属性</a>
+
+                    </li>
+                </ul>
+
+            </div>
+            <div class="col-md-4 col-xs-3  text-right">
+                <div>
+                    <i class="glyphicon glyphicon-log-out"></i>
+                    <a onclick="javascript:return confirm('确定注销吗?');" id="Logout">注销</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</header>
+
+<!--用户信息-->
+<section>
+    <div class="container user">
+        <div class="row">
+            <div class="col-md-3 col-xs-6 center-block">
+                <div class="usermoney center-block">
+                    <div>
+                        <i id="moneyicon" onclick="change()" class="glyphicon glyphicon-eye-close"></i>
+                        <i id="a_001">***</i>
+                        <span  id="total_money"><span id="totalmoney">292.48</span>元</span>
+
+                    </div>
+                    <div><a href="" style="color:#fff" data-toggle="modal" data-target="#myModal">充值</a></div>
+                </div>
+            </div>
+
+
+            <!-- 模态框（Modal） -->
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                                &times;
+                            </button>
+                            <h4 class="modal-title" id="myModalLabel">
+                                充值
+                            </h4>
+                        </div>
+                        <div class="modal-body">
+                            <input name="chongzhi" type="text" id="chongzhi" min="1" />元
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">关闭
+                            </button>
+
+                            <input type="submit" name="CzhiBtn" value="充值" id="CzhiBtn" class="btn btn-primary" />
+
+                        </div>
+                    </div><!-- /.modal-content -->
+                </div><!-- /.modal -->
+            </div>
+            <!-- /.modal -->
+            <div class="col-md-3 col-xs-6 center-block">
+                <div class="usermoney center-block">
+                    <div><i class="glyphicon glyphicon-gift"></i><span><span id="UnfilleDorders">10</span></span>
+
+                    </div>
+                    <div><span>待发货</span></div>
+                </div>
+            </div>
+            <div class="col-md-3 col-xs-6 center-block">
+                <a href="#shoplist">
+                    <div class="usermoney center-block">
+                        <div><i class="glyphicon glyphicon-saved"></i><span><span id="AllOrderForm">14</span></span></div>
+                        <div><span>所有订单</span></div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-md-3 col-xs-6 center-block">
+                <div class="usermoney center-block">
+                    <div><i class="glyphicon glyphicon-send"></i><span><span id="WaitForReceiving">2</span></span></div>
+                    <div><span>待收货</span></div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+
+            </div>
+            <div class="col-md-3">
+
+            </div>
+            <div class="col-md-3">
+
+            </div>
+            <div class="col-md-3">
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--订单列表-->
+<selection id="shoplist">
+    <div class="tabC">
+        <div class="container">
+            <div class="row goods-row">
+
+
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs" role="tablist">
+                    <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">所有订单</a></li>
+                    <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">待发货</a></li>
+                    <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">待收货</a></li>
+                    <li role="presentation"><a href="#success" aria-controls="messages" role="tab" data-toggle="tab">已完成</a></li>
+
+
+                </ul>
+
+                <!-- Tab panes -->
+                <div class="tab-content goodslist">
+                    <div role="tabpanel" class="tab-pane fade in active" id="home">
+                        <div class="row">
+
+                            <div class="col-md-12 col-xs-12 center-block">
+
+                                <div class="goods-border">
+                                    <table class="table table-responsive table-hover text-center">
+                                        <tr>
+                                            <td>宝贝</td>
+                                            <td>标题</td>
+                                            <td>价格</td>
+                                            <td>状态</td>
+                                            <td>详情</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td><img src="images/20193912053916.jpg" height="80px" alt="" /></td>
+                                            <td><span>红糖麻花</span></td>
+                                            <td><span>9.9</span></td>
+                                            <td><span>未发货</span></td>
+                                            <td><a href="ordersDetails.html">查看</a></td>
+                                        </tr>
+
+
+
+                                        <tr>
+                                            <td><img src="images/20191413121419.jpg" height="80px" alt="" /></td>
+                                            <td><span>小鱼干</span></td>
+                                            <td><span>28</span></td>
+                                            <td><span>未发货</span></td>
+                                            <td><a href="ordersDetails.html">查看</a></td>
+                                        </tr>
+
+
+
+                                        <tr>
+                                            <td><img src="images/20191413121419.jpg" height="80px" alt="" /></td>
+                                            <td><span>小鱼干</span></td>
+                                            <td><span>28</span></td>
+                                            <td><span>未发货</span></td>
+                                            <td><a href="ordersDetails.html">查看</a></td>
+                                        </tr>
+
+
+
+                                        <tr>
+                                            <td><img src="images/20191512051508.jpg" height="80px" alt="" /></td>
+                                            <td><span>芒果脯</span></td>
+                                            <td><span>29.91</span></td>
+                                            <td><span>未发货</span></td>
+                                            <td><a href="ordersDetails.html">查看</a></td>
+                                        </tr>
+
+
+
+                                        <tr>
+                                            <td><img src="images/20193912053916.jpg" height="80px" alt="" /></td>
+                                            <td><span>红糖麻花</span></td>
+                                            <td><span>9.9</span></td>
+                                            <td><span>未发货</span></td>
+                                            <td><a href="ordersDetails.html">查看</a></td>
+                                        </tr>
+
+
+
+                                        <tr>
+                                            <td><img src="images/20191413121419.jpg" height="80px" alt="" /></td>
+                                            <td><span>小鱼干</span></td>
+                                            <td><span>28</span></td>
+                                            <td><span>已完成</span></td>
+                                            <td><a href="ordersDetails.html">查看</a></td>
+                                        </tr>
+
+
+
+                                        <tr>
+                                            <td><img src="images/20193912053916.jpg" height="80px" alt="" /></td>
+                                            <td><span>红糖麻花</span></td>
+                                            <td><span>9.9</span></td>
+                                            <td><span>未发货</span></td>
+                                            <td><a href="ordersDetails.html">查看</a></td>
+                                        </tr>
+
+
+
+                                        <tr>
+                                            <td><img src="images/20193912053916.jpg" height="80px" alt="" /></td>
+                                            <td><span>红糖麻花</span></td>
+                                            <td><span>9.9</span></td>
+                                            <td><span>已发货</span></td>
+                                            <td><a href="ordersDetails.html">查看</a></td>
+                                        </tr>
+
+
+
+                                        <tr>
+                                            <td><img src="images/20193912053916.jpg" height="80px" alt="" /></td>
+                                            <td><span>红糖麻花</span></td>
+                                            <td><span>9.9</span></td>
+                                            <td><span>已完成</span></td>
+                                            <td><a href="ordersDetails.html">查看</a></td>
+                                        </tr>
+
+
+
+                                        <tr>
+                                            <td><img src="images/20192020052000.jpg" height="80px" alt="" /></td>
+                                            <td><span>糯米糍</span></td>
+                                            <td><span>45</span></td>
+                                            <td><span>未发货</span></td>
+                                            <td><a href="ordersDetails.html">查看</a></td>
+                                        </tr>
+
+
+
+                                        <tr>
+                                            <td><img src="images/20191512051508.jpg" height="80px" alt="" /></td>
+                                            <td><span>芒果脯</span></td>
+                                            <td><span>29.91</span></td>
+                                            <td><span>未发货</span></td>
+                                            <td><a href="ordersDetails.html">查看</a></td>
+                                        </tr>
+
+
+
+                                        <tr>
+                                            <td><img src="images/20193912053916.jpg" height="80px" alt="" /></td>
+                                            <td><span>红糖麻花</span></td>
+                                            <td><span>9.9</span></td>
+                                            <td><span>未发货</span></td>
+                                            <td><a href="ordersDetails.html">查看</a></td>
+                                        </tr>
+
+
+
+                                        <tr>
+                                            <td><img src="images/20191413121419.jpg" height="80px" alt="" /></td>
+                                            <td><span>小鱼干</span></td>
+                                            <td><span>28</span></td>
+                                            <td><span>未发货</span></td>
+                                            <td><a href="ordersDetails.html">查看</a></td>
+                                        </tr>
+
+
+
+                                        <tr>
+                                            <td><img src="images/20192020052000.jpg" height="80px" alt="" /></td>
+                                            <td><span>糯米糍</span></td>
+                                            <td><span>45</span></td>
+                                            <td><span>已发货</span></td>
+                                            <td><a href="ordersDetails.html">查看</a></td>
+                                        </tr>
+
+
+
+
+                                    </table>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane fade" id="profile">
+                        <div class="row">
+
+                            <div class="col-md-3 col-xs-6">
+                                <div class="goods-border">
+                                    <div class="img-big-hidden">
+                                        <img src="images/20193912053916.jpg" class="img-responsive img-big" alt="" width="100%">
+                                    </div>
+                                    <div  class="goods" >
+                                        <span>￥9.9</span><img src="images/newgoods.png" height="20px" alt="">
+                                    </div>
+                                    <p>红糖麻花</p>
+                                    <span>未发货</span>
+                                    <br>
+                                    <span><a href="ordersDetails.html">查看</a></span>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3 col-xs-6">
+                                <div class="goods-border">
+                                    <div class="img-big-hidden">
+                                        <img src="images/20191413121419.jpg" class="img-responsive img-big" alt="" width="100%">
+                                    </div>
+                                    <div  class="goods" >
+                                        <span>￥28</span><img src="images/newgoods.png" height="20px" alt="">
+                                    </div>
+                                    <p>小鱼干</p>
+                                    <span>未发货</span>
+                                    <br>
+                                    <span><a href="ordersDetails.html">查看</a></span>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3 col-xs-6">
+                                <div class="goods-border">
+                                    <div class="img-big-hidden">
+                                        <img src="images/20191413121419.jpg" class="img-responsive img-big" alt="" width="100%">
+                                    </div>
+                                    <div  class="goods" >
+                                        <span>￥28</span><img src="images/newgoods.png" height="20px" alt="">
+                                    </div>
+                                    <p>小鱼干</p>
+                                    <span>未发货</span>
+                                    <br>
+                                    <span><a href="ordersDetails.html">查看</a></span>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3 col-xs-6">
+                                <div class="goods-border">
+                                    <div class="img-big-hidden">
+                                        <img src="images/20191512051508.jpg" class="img-responsive img-big" alt="" width="100%">
+                                    </div>
+                                    <div  class="goods" >
+                                        <span>￥29.91</span><img src="images/newgoods.png" height="20px" alt="">
+                                    </div>
+                                    <p>芒果脯</p>
+                                    <span>未发货</span>
+                                    <br>
+                                    <span><a href="ordersDetails.html">查看</a></span>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3 col-xs-6">
+                                <div class="goods-border">
+                                    <div class="img-big-hidden">
+                                        <img src="images/20193912053916.jpg" class="img-responsive img-big" alt="" width="100%">
+                                    </div>
+                                    <div  class="goods" >
+                                        <span>￥9.9</span><img src="images/newgoods.png" height="20px" alt="">
+                                    </div>
+                                    <p>红糖麻花</p>
+                                    <span>未发货</span>
+                                    <br>
+                                    <span><a href="ordersDetails.html">查看</a></span>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3 col-xs-6">
+                                <div class="goods-border">
+                                    <div class="img-big-hidden">
+                                        <img src="images/20193912053916.jpg" class="img-responsive img-big" alt="" width="100%">
+                                    </div>
+                                    <div  class="goods" >
+                                        <span>￥9.9</span><img src="images/newgoods.png" height="20px" alt="">
+                                    </div>
+                                    <p>红糖麻花</p>
+                                    <span>未发货</span>
+                                    <br>
+                                    <span><a href="ordersDetails.html">查看</a></span>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3 col-xs-6">
+                                <div class="goods-border">
+                                    <div class="img-big-hidden">
+                                        <img src="images/20192020052000.jpg" class="img-responsive img-big" alt="" width="100%">
+                                    </div>
+                                    <div  class="goods" >
+                                        <span>￥45</span><img src="images/newgoods.png" height="20px" alt="">
+                                    </div>
+                                    <p>糯米糍</p>
+                                    <span>未发货</span>
+                                    <br>
+                                    <span><a href="ordersDetails.html">查看</a></span>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3 col-xs-6">
+                                <div class="goods-border">
+                                    <div class="img-big-hidden">
+                                        <img src="images/20191512051508.jpg" class="img-responsive img-big" alt="" width="100%">
+                                    </div>
+                                    <div  class="goods" >
+                                        <span>￥29.91</span><img src="images/newgoods.png" height="20px" alt="">
+                                    </div>
+                                    <p>芒果脯</p>
+                                    <span>未发货</span>
+                                    <br>
+                                    <span><a href="ordersDetails.html">查看</a></span>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3 col-xs-6">
+                                <div class="goods-border">
+                                    <div class="img-big-hidden">
+                                        <img src="images/20193912053916.jpg" class="img-responsive img-big" alt="" width="100%">
+                                    </div>
+                                    <div  class="goods" >
+                                        <span>￥9.9</span><img src="images/newgoods.png" height="20px" alt="">
+                                    </div>
+                                    <p>红糖麻花</p>
+                                    <span>未发货</span>
+                                    <br>
+                                    <span><a href="ordersDetails.html">查看</a></span>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3 col-xs-6">
+                                <div class="goods-border">
+                                    <div class="img-big-hidden">
+                                        <img src="images/20191413121419.jpg" class="img-responsive img-big" alt="" width="100%">
+                                    </div>
+                                    <div  class="goods" >
+                                        <span>￥28</span><img src="images/newgoods.png" height="20px" alt="">
+                                    </div>
+                                    <p>小鱼干</p>
+                                    <span>未发货</span>
+                                    <br>
+                                    <span><a href="ordersDetails.html">查看</a></span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane fade" id="messages">
+                        <div class="row">
+
+                            <div class="col-md-3 col-xs-6">
+                                <div class="goods-border">
+                                    <div class="img-big-hidden">
+                                        <img src="images/20193912053916.jpg" class="img-responsive img-big" alt="" width="100%">
+                                    </div>
+                                    <div  class="goods" >
+                                        <span>￥9.9</span><img src="images/newgoods.png" height="20px" alt="">
+                                    </div>
+                                    <p>红糖麻花</p>
+                                    <span>已发货</span>
+                                    <br>
+                                    <span><a href="ordersDetails.html">查看</a></span>
+                                    <span><a href="#">确认收货</a></span>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3 col-xs-6">
+                                <div class="goods-border">
+                                    <div class="img-big-hidden">
+                                        <img src="images/20192020052000.jpg" class="img-responsive img-big" alt="" width="100%">
+                                    </div>
+                                    <div  class="goods" >
+                                        <span>￥45</span><img src="images/newgoods.png" height="20px" alt="">
+                                    </div>
+                                    <p>糯米糍</p>
+                                    <span>已发货</span>
+                                    <br>
+                                    <span><a href="ordersDetails.html">查看</a></span>
+                                    <span><a href="#">确认收货</a></span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div role="tabpanel" class="tab-pane fade" id="success">
+                        <div class="row">
+
+                            <div class="col-md-3 col-xs-6">
+                                <div class="goods-border">
+                                    <div class="img-big-hidden">
+                                        <img src="images/20191413121419.jpg" class="img-responsive img-big" alt="" width="100%">
+                                    </div>
+                                    <div  class="goods" >
+                                        <span>￥28</span><img src="images/newgoods.png" height="20px" alt="">
+                                    </div>
+                                    <p>小鱼干</p>
+                                    <span>已完成</span>
+                                    <br>
+                                    <span><a href="ordersDetails.html">查看</a></span>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3 col-xs-6">
+                                <div class="goods-border">
+                                    <div class="img-big-hidden">
+                                        <img src="images/20193912053916.jpg" class="img-responsive img-big" alt="" width="100%">
+                                    </div>
+                                    <div  class="goods" >
+                                        <span>￥9.9</span><img src="images/newgoods.png" height="20px" alt="">
+                                    </div>
+                                    <p>红糖麻花</p>
+                                    <span>已完成</span>
+                                    <br>
+                                    <span><a href="ordersDetails.html">查看</a></span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</selection>
+
+</form>
+<!--footer-->
+﻿<footer class="footer" style="">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-md-2 col-xs-5" style="padding-top: 8em">
+                <p>友情链接</p>
+                <p><a href="http://www.baidu.com" target="_blank">百度</a></p>
+                <p> <a href="http://taobao.com" target="_blank">淘宝</a></p>
+                <p><a href="http://jd.com" target="_blank">京东</a></p>
+            </div>
+            <div class="col-md-8 col-xs-7" style="padding-top: 8em">
+                <p> 版权： 地址：泉州市鲤城区南环路1129号 邮编：362000</p>
+
+            </div>
+
+        </div>
+
+
+
+    </div>
+</footer>
+
+</body>
+</html>
+<script type="text/javascript" src="js/index.js"></script>

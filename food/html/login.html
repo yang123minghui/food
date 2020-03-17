@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>用户登录</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1,initial-scale=1,user-scalable=no" />
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/index.css">
+    <style type="text/css">
+        @media screen and (max-width:800px)
+        {
+            body{ background:url('images/bg3.jpg') no-repeat !important;background-size:cover; }
+        }
+    </style>
+</head>
+<body style="background:url('images/bg3.jpg') no-repeat !important;background-size:cover; ">
+<form method="post">
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-7 hidden-xs"></div>
+            <div class="col-md-5" style="margin-top:150px;display:flex;flex-direction: column;justify-content: center;align-items: center;">
+                <form action="">
+                    <div class="input_div">
+                        <div align="center">
+                            <span  style="color:Black">用户登录</span>
+                        </div>
+                        <div class="input-group">
+                            <span class="input-group-addon" id="basic-addon1">用户:</span>
+                            <input name="UserName" id="UserName" type="text" class="form-control" placeholder="账号" aria-describedby="basic-addon1" />
+
+                        </div>
+                        <div class="input-group">
+                            <span class="input-group-addon" id="basic-addon2">密码:</span>
+                            <input name="UserPwd" type="password" id="UserPwd" class="form-control" placeholder="密码" aria-describedby="basic-addon2" />
+
+                        </div>
+                        <div class="input-group">
+                            <span class="input-group-addon" id="Span1">验证码:</span>
+                            <input name="tbx_yzm" type="text" id="tbx_yzm" class="form-control" style="width:70px;" />
+                            <input type="image" name="ibtn_yzm" id="ibtn_yzm" src="ImageCode.aspx" style="height:30px;" />
+                            <a href="javascript:changeCode()"style="text-decoration: underline; font-size:10px;">换一张</a>
+
+                        </div>
+                        <div align="center">
+                            <input type="submit" name="Sub" value="登录" id="Sub" class="btn btn-info" />
+
+                            <input type="reset" class="btn btn-info" value="重置"><br />
+                            <a href="register.html">注册</a>
+                        </div>
+
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</form>
+</body>
+</html>
+<script type="text/javascript">
+    //点击验证码切换
+    function changeCode() {
+        document.getElementById('ibtn_yzm').src = document.getElementById('ibtn_yzm').src + '?';
+    }
+</script>

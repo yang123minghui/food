@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>购物车</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1,initial-scale=1,user-scalable=no" />
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+<!-- 顶部导航栏-->
+<header id="header_nav">
+    <!--    上顶部-->
+    <div class="top-bar hidden-xs visible-lg text-muted">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 top-bar-1 text-center">
+                    <a href="#" class="about">
+                        <i class="glyphicon glyphicon-phone"></i>
+                        <span class="">关注微信号</span>
+                        <span class="glyphicon glyphicon-triangle-bottom"></span>
+                        <img  id="about_img" src="images/guanyu.jpg" width="200px">
+                    </a>
+                </div>
+                <div class="col-md-4 top-bar-2 text-center">
+                    <i class="glyphicon glyphicon-earphone"></i>
+                    <span class="">888-555-55555（服务时间:9:00-21:00）</span>
+                </div>
+                <div class="col-md-2 top-bar-3 text-center">泉州经贸</div>
+                <div class="col-md-3 text-center">
+                    <a class="btn btn-info regist btn-sm">注册</a>
+
+                    <a id="HLinkLogin" class="text-muted">admin</a>
+                    <a onclick="javascript:return confirm('确定注销吗?');" id="Logout"  style="display:block;">注销</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    ﻿ <div class="bottom-bar">
+    <nav class="navbar navbar-default navbar-static-top nav-index">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#"><img src="images/logo.png"> </a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="nav">
+                <ul class="nav navbar-nav" id="nav-ul">
+                    <li><a class="active" href="index.html">首页</a></li>
+
+                    <li class="dropdown">
+                        <a href="AllGood.html">糖零食</a>
+                    </li>
+                    <li><a href="AllGood.html">传统糕点</a></li>
+                    <li><a href="AllGood.html">芒果干</a></li>
+                    <li><a href="AllGood.html">鱼系列</a></li>
+                    <li><a href="AllGood.html">猪肉类</a></li>
+
+                    <li><a href="index.html#about">关于我们</a></li>
+                </ul>
+                <!--                     <form class="navbar-form navbar-left">-->
+                <!--                         <div class="form-group">-->
+                <!--                             <input type="text" class="form-control" placeholder="Search">-->
+                <!--                         </div>-->
+                <!--                         <button type="submit" class="btn btn-default">Submit</button>-->
+                <!--                     </form>-->
+                <ul class="nav navbar-nav navbar-right hidden-sm" id="current">
+                    <li><a href="PErsonalCenter.html">个人中心</a></li>
+                    <li><a href="shopcar.html"><i  class="glyphicon glyphicon-shopping-cart"></i>购物车</a></li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+</div>
+</header>
+
+
+<!-- 手机底部导航栏 -->
+<nav class="navbar navbar-default navbar-fixed-bottom visible-xs">
+    <div class="container-fluid">
+        <div class="container">
+            <div class="row">
+                <ul class="nav navbar-nav text-center" id="bottom-nav">
+                    <li class="col-xs-4 " ><a href="index.html" class="glyphicon glyphicon-home" ></a></li>
+                    <li  class="col-xs-4  active"><a href="shopcar.html" class="glyphicon glyphicon-shopping-cart"></a></li>
+                    <li  class="col-xs-4"><a href="PErsonalCenter.html" class="glyphicon glyphicon-user"></a></li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</nav>
+
+<!--a购物车例表页-->
+<div class="container">
+
+    <div class="row">
+
+        <div class="col-md-12 center-block">
+
+            <div class="goods-border">
+                <table class="table table-responsive table-hover text-center">
+                    <tr>
+
+                        <td><input type="checkbox" id="all" onclick="checkall()" />宝贝</td>
+                        <td>标题</td>
+                        <td>单价</td>
+                        <td>数量</td>
+
+                        <td>详情</td>
+                    </tr>
+
+                    <tr>
+
+                        <td>
+                            <input type="checkbox" name="box"/>
+                            <span name="gdid" style="display:none;">16</span>
+                            <img src="images/20191512051508.jpg" height="80px" alt="" /></td>
+                        <td ><span>芒果脯</span></td>
+                        <td><span name="price">29.91</span></td>
+                        <td align="center">
+
+                            <input type="number" name="number"  style="max-width:60px" class="form-control" min=1 value=2 />
+
+
+                        </td>
+
+                        <td><a href="goodDetail.html">查看</a></td>
+                    </tr>
+
+
+
+
+                    <tr>
+
+                        <td>
+                            <input type="checkbox" name="box"/>
+                            <span name="gdid" style="display:none;">17</span>
+                            <img src="images/20193912053916.jpg" height="80px" alt="" /></td>
+                        <td ><span>红糖麻花</span></td>
+                        <td><span name="price">9.9</span></td>
+                        <td align="center">
+
+                            <input type="number" name="number"  style="max-width:60px" class="form-control" min=1 value=3 />
+
+
+                        </td>
+
+                        <td><a href="goodDetail.html">查看</a></td>
+                    </tr>
+
+
+
+
+                    <tr>
+
+                        <td>
+                            <input type="checkbox" name="box"/>
+                            <span name="gdid" style="display:none;">19</span>
+                            <img src="images/20191413121419.jpg" height="80px" alt="" /></td>
+                        <td ><span>小鱼干</span></td>
+                        <td><span name="price">28</span></td>
+                        <td align="center">
+
+                            <input type="number" name="number"  style="max-width:60px" class="form-control" min=1 value=16 />
+
+
+                        </td>
+
+                        <td><a href="goodDetail.html">查看</a></td>
+                    </tr>
+
+
+
+
+                    <tr>
+
+                        <td>
+                            <input type="checkbox" name="box"/>
+                            <span name="gdid" style="display:none;">29</span>
+                            <img src="images/20192020052000.jpg" height="80px" alt="" /></td>
+                        <td ><span>糯米糍</span></td>
+                        <td><span name="price">45</span></td>
+                        <td align="center">
+
+                            <input type="number" name="number"  style="max-width:60px" class="form-control" min=1 value=3 />
+
+
+                        </td>
+
+                        <td><a href="goodDetail.html">查看</a></td>
+                    </tr>
+
+
+
+
+
+                </table>
+            </div>
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="col-md-8">
+        </div>
+        <div class="col-md-4 text-right">
+            <p>
+                总金额:<span id="totalMoney">0</span><span>元</span>
+            </p>
+            <a href="#" style="padding:10px;background-color: rgb(255,69,0);color:#fff" onclick="fukuan()">付款</a>
+        </div>
+    </div>
+</div>
+
+</form>
+</body>
+</html>
+<script type="text/javascript" src="js/shopcar.js">
+</script>

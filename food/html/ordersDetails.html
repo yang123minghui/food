@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>订单细节页</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1,initial-scale=1,user-scalable=no" />
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/index.css">
+    <!-自动回退顶部--->
+
+    <link rel="stylesheet" href="http://www.kdniao.com/OutDemo/KDNWidget/KDNWidget.css" />
+    <script type="text/javascript">
+        window.onload = function () { window.parent.scrollTo(0, 0); }
+    </script>
+</head>
+<body>
+<div class="container">
+    <a href="javascript:history.go(-1)">返回上一步</a>
+</div>
+<!--content-->
+<section class="content_index">
+    <div class="container">
+        <div class="row goods_detalis">
+
+            <div class="col-md-6 col-xs-12 ">
+                <img id="GoodImg" class="img-responsive center-block" alt="" src="images/20193912053916.jpg" style="width:80%;" />
+
+            </div>
+            <div class="col-md-6 col-xs-12">
+
+                <div class="col-md-12 col-xs-6 content_index">
+                    <strong>标题：</strong><span><span id="Name">红糖麻花</span></span>
+                </div>
+                <div class="col-md-12 col-xs-6 content_index">
+                    <strong>价格：</strong><span style="color: orange;font-size: 22px"><i>￥</i><span id="Money">9.9</span></span>
+                </div>
+                <div class="col-md-12 col-xs-6 content_index">
+                    <strong>数量：</strong><span style="color: red;font-size: 22px"><span id="BuyNumber">3</span></span>
+                </div>
+                <div class="col-md-12 col-xs-6 content_index">
+                    <strong>订单号：</strong><span style="color: red;font-size: 22px"><span id="IDOrderNumber">7678891462</span></span>
+                </div>
+
+                <div class="col-md-12 col-xs-6 content_index">
+                    <strong>买家信息：</strong>
+                    <span style="color: red;font-size: 22px">
+                   <span id="Info">颜永鸿,15551234567,福建省泉州市永春县泉州经贸职业技术学院</span>
+                    </span>
+
+
+                </div>
+                <div class="col-md-12 col-xs-6 content_index">
+                    <strong>下单时间：</strong>
+                    <span style="color: red;font-size: 22px">
+                  <span id="Buygoods">2019/6/15 11:29:20</span>
+                    </span>
+
+                </div>
+
+
+                <div class="col-md-12 col-xs-6 content_index">
+                    <strong>快递单号：</strong>
+                    <span>
+                    <span id="TrackingNumber"></span>
+                    </span>
+                    <a class="btn btn-success">查询</a>
+                </div>
+
+            </div>
+
+            <div class="row">
+
+                <div class="col-md-12 col-xs-12 content_index">
+                    <p>快递信息：</p>
+                    <!--快递信息嵌入-->
+                    <!-- <div id="demoID"></div>
+                         <script src="http://www.kdniao.com/OutDemo/KDNWidget/KDNWidget.js"></script>
+                         <script>
+                             function query() {
+                                 var s = document.getElementById("TrackingNumber");
+                                 var str = "\"" + s.innerText + "\"";
+                                 KDNWidget.run({
+                                     serviceType: "B",
+                                     expCode: "YTO",
+                                     expNo: str,
+                                     showType: "normal",
+                                     container: "demoID"
+                                 })
+                                 console.log("\"" + s.innerText + "\"");
+                             }
+
+
+
+                       </script>-->
+                    <!--快递信息嵌入-->
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+</body>
+</html>
