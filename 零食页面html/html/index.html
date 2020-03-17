@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>零食店铺</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1,initial-scale=1,user-scalable=no" />
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+<!-- 顶部导航栏-->
+<header id="header_nav">
+    <!--    上顶部-->
+    <div class="top-bar hidden-xs visible-lg text-muted">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 top-bar-1 text-center">
+                    <a href="#" class="about">
+                        <i class="glyphicon glyphicon-phone"></i>
+                        <span class="">关注微信号</span>
+                        <span class="glyphicon glyphicon-triangle-bottom"></span>
+                        <img  id="about_img" src="images/guanyu.jpg" width="200px">
+                    </a>
+                </div>
+                <div class="col-md-4 top-bar-2 text-center">
+                    <i class="glyphicon glyphicon-earphone"></i>
+                    <span class="">888-555-55555（服务时间:9:00-21:00）</span>
+                </div>
+                <div class="col-md-2 top-bar-3 text-center">泉州经贸</div>
+                <div class="col-md-3 text-center">
+                    <a class="btn btn-info regist btn-sm" href="register.html">注册</a>
+
+                    <a id="HLinkLogin" class="text-muted" href="login.html">请登录</a>
+                    <a onclick="javascript:return confirm('确定注销吗?');" id="Logout" style="display:none">注销</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    ﻿ <div class="bottom-bar">
+    <nav class="navbar navbar-default navbar-static-top nav-index">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#"><img src="images/logo.png"> </a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="nav">
+                <ul class="nav navbar-nav" id="nav-ul">
+                    <li><a class="active" href="index.html">首页</a></li>
+
+                    <li class="dropdown">
+                        <a href="AllGood.html">糖零食</a>
+                    </li>
+                    <li><a href="AllGood.html">传统糕点</a></li>
+                    <li><a href="AllGood.html">芒果干</a></li>
+                    <li><a href="AllGood.html">鱼系列</a></li>
+                    <li><a href="AllGood.html">猪肉类</a></li>
+
+                    <li><a href="index.html#about">关于我们</a></li>
+                </ul>
+                <!--                     <form class="navbar-form navbar-left">-->
+                <!--                         <div class="form-group">-->
+                <!--                             <input type="text" class="form-control" placeholder="Search">-->
+                <!--                         </div>-->
+                <!--                         <button type="submit" class="btn btn-default">Submit</button>-->
+                <!--                     </form>-->
+                <ul class="nav navbar-nav navbar-right hidden-sm" id="current">
+                    <li><a href="PErsonalCenter.html">个人中心</a></li>
+                    <li><a href="shopcar.html"><i  class="glyphicon glyphicon-shopping-cart"></i>购物车</a></li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+</div>
+</header>
+
+
+<!-- 手机底部导航栏 -->
+<nav class="navbar navbar-default navbar-fixed-bottom visible-xs">
+    <div class="container-fluid">
+        <div class="container">
+            <div class="row">
+                <ul class="nav navbar-nav text-center" id="bottom-nav">
+                    <li class="col-xs-4  active" ><a href="index.aspx" class="glyphicon glyphicon-home" ></a></li>
+                    <li  class="col-xs-4"><a href="shopcar.aspx" class="glyphicon glyphicon-shopping-cart"></a></li>
+                    <li  class="col-xs-4"><a href="PErsonalCenter.aspx" class="glyphicon glyphicon-user"></a></li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</nav>
+
+<!--轮播图-->
+<section>
+    <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="1200">
+        <!-- 轮播（Carousel）指标 -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+        <!-- 轮播（Carousel）项目 -->
+        <div class="carousel-inner ">
+            <div class="item active">
+                <img src="images/b2.jpg" alt="First slide">
+            </div>
+            <div class="item">
+                <img src="images/b3.jpg" alt="Second slide">
+            </div>
+            <div class="item">
+                <img src="images/b1.jpg" alt="Third slide">
+            </div>
+        </div>
+        <!-- 轮播（Carousel）导航 -->
+        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+
+        </a>
+        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+
+        </a>
+    </div>
+</section>
+
+<!--关于我们-->
+<!--手机版收缩隐藏-->
+<section class=""  id="about">
+    <!--    标题-->
+    <div class="title text-center">
+        <strong><h2>关于我们</h2></strong>
+        <div>
+            <p><i class="glyphicon glyphicon-star icon1"></i><i class="glyphicon glyphicon-star icon2"></i><i class="glyphicon glyphicon-star icon1"></i></p>
+        </div>
+
+    </div>
+    <!--    主要内容-->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 text-muted text-about">
+                <p>零食铺是属于城市味觉美食网的兄弟同根企业，是一家提供健康营养合理搭配的便利式休闲食品商务平台；集各类休闲小吃于一体，从食品选材到营养搭配，零食铺始终以经验团队的优势领先于同行，以改善人体膳食解决方案为主导，坚定不移地走服务路线，可口，健康，安全，快速是零食铺的服务承诺。</p>
+
+                <p>具体分类按：老年零食，儿童零食（酸角糕），养生零食，孕妇零食，减肥零食，办公室闲趣零食，居家休闲零食，零食礼包，聚会零食等。</p>
+            </div>
+            <div class="col-md-4">
+                <img src="images/lingshi.jpg" alt="" class="img-responsive img-rounded" />
+            </div>
+        </div>
+    </div>
+</section>
+<!--商品列表-->
+<selection>
+    <div class="tabC">
+        <div class="container">
+            <div class="row goods-row">
+
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs" role="tablist">
+                    <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">热卖</a></li>
+                    <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">新品</a></li>
+                    <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">特惠</a></li>
+                    <li  class="pull-right"><a href="AllGood.html">更多</a></li>
+
+                </ul>
+
+                <!-- Tab panes -->
+                <div class="tab-content goodslist">
+                    <div role="tabpanel" class="tab-pane fade in active" id="home">
+                        <div class="row">
+
+                            <a href="goodDetail.html">
+                                <div class="col-md-3 col-xs-6">
+                                    <div class="goods-border">
+                                        <div class="img-big-hidden">
+                                            <img src="images/20192020052000.jpg" class="img-responsive img-big" alt="" width="100%" />
+                                        </div>
+                                        <div  class="goods" >
+                                            <span>￥45</span><img src="images/baoyou.png" height="20px" alt="">
+                                        </div>
+                                        <p>糯米糍</p>
+                                        <span>产地：<span>泉州</span></span>
+                                        <br>
+                                        <span>销量：<span>10</span></span></div>
+                                </div>
+                            </a>
+
+
+                            <a href="goodDetail.html">
+                                <div class="col-md-3 col-xs-6">
+                                    <div class="goods-border">
+                                        <div class="img-big-hidden">
+                                            <img src="images/20191820051813.jpg" class="img-responsive img-big" alt="" width="100%" />
+                                        </div>
+                                        <div  class="goods" >
+                                            <span>￥45</span><img src="images/baoyou.png" height="20px" alt="">
+                                        </div>
+                                        <p>肉松饼</p>
+                                        <span>产地：<span>泉州</span></span>
+                                        <br>
+                                        <span>销量：<span>10</span></span></div>
+                                </div>
+                            </a>
+
+
+                            <a href="goodDetail.html">
+                                <div class="col-md-3 col-xs-6">
+                                    <div class="goods-border">
+                                        <div class="img-big-hidden">
+                                            <img src="images/20191620051604.jpg" class="img-responsive img-big" alt="" width="100%" />
+                                        </div>
+                                        <div  class="goods" >
+                                            <span>￥50.0</span><img src="images/baoyou.png" height="20px" alt="">
+                                        </div>
+                                        <p>大白兔</p>
+                                        <span>产地：<span>泉州</span></span>
+                                        <br>
+                                        <span>销量：<span>10</span></span></div>
+                                </div>
+                            </a>
+
+
+                            <a href="goodDetail.html">
+                                <div class="col-md-3 col-xs-6">
+                                    <div class="goods-border">
+                                        <div class="img-big-hidden">
+                                            <img src="images/20191220051230.jpg" class="img-responsive img-big" alt="" width="100%" />
+                                        </div>
+                                        <div  class="goods" >
+                                            <span>￥20.20</span><img src="images/baoyou.png" height="20px" alt="">
+                                        </div>
+                                        <p>果汁软糖</p>
+                                        <span>产地：<span>泉州</span></span>
+                                        <br>
+                                        <span>销量：<span>20</span></span></div>
+                                </div>
+                            </a>
+
+
+                            <a href="goodDetail.html">
+                                <div class="col-md-3 col-xs-6">
+                                    <div class="goods-border">
+                                        <div class="img-big-hidden">
+                                            <img src="images/20190320050355.jpg" class="img-responsive img-big" alt="" width="100%" />
+                                        </div>
+                                        <div  class="goods" >
+                                            <span>￥40.0</span><img src="images/baoyou.png" height="20px" alt="">
+                                        </div>
+                                        <p>鸭脖子</p>
+                                        <span>产地：<span>泉州</span></span>
+                                        <br>
+                                        <span>销量：<span>0</span></span></div>
+                                </div>
+                            </a>
+
+
+                            <a href="goodDetail.html">
+                                <div class="col-md-3 col-xs-6">
+                                    <div class="goods-border">
+                                        <div class="img-big-hidden">
+                                            <img src="images/20194519014550.jpg" class="img-responsive img-big" alt="" width="100%" />
+                                        </div>
+                                        <div  class="goods" >
+                                            <span>￥18.80</span><img src="images/baoyou.png" height="20px" alt="">
+                                        </div>
+                                        <p>辣味猪肉</p>
+                                        <span>产地：<span>泉州</span></span>
+                                        <br>
+                                        <span>销量：<span>220</span></span></div>
+                                </div>
+                            </a>
+
+
+                            <a href="goodDetail.html">
+                                <div class="col-md-3 col-xs-6">
+                                    <div class="goods-border">
+                                        <div class="img-big-hidden">
+                                            <img src="images/20192016082033.jpg" class="img-responsive img-big" alt="" width="100%" />
+                                        </div>
+                                        <div  class="goods" >
+                                            <span>￥35</span><img src="images/baoyou.png" height="20px" alt="">
+                                        </div>
+                                        <p>猪肉铺</p>
+                                        <span>产地：<span>泉州</span></span>
+                                        <br>
+                                        <span>销量：<span>2000</span></span></div>
+                                </div>
+                            </a>
+
+
+                            <a href="goodDetail.html">
+                                <div class="col-md-3 col-xs-6">
+                                    <div class="goods-border">
+                                        <div class="img-big-hidden">
+                                            <img src="images/20191413121419.jpg" class="img-responsive img-big" alt="" width="100%" />
+                                        </div>
+                                        <div  class="goods" >
+                                            <span>￥28</span><img src="images/baoyou.png" height="20px" alt="">
+                                        </div>
+                                        <p>小鱼干</p>
+                                        <span>产地：<span>泉州</span></span>
+                                        <br>
+                                        <span>销量：<span>999</span></span></div>
+                                </div>
+                            </a>
+
+
+
+
+
+                        </div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane fade" id="profile">
+                        <div class="row">
+
+                            <a href="goodDetail.html">
+                                <div class="col-md-3 col-xs-6">
+                                    <div class="goods-border">
+                                        <div class="img-big-hidden">
+                                            <img src="images/20192220052249.jpg" class="img-responsive img-big" alt="" width="100%">
+                                        </div>
+                                        <div  class="goods" >
+                                            <span>￥40</span><img src="images/newgoods.png" height="20px" alt="">
+                                        </div>
+                                        <p>桑葚干</p>
+                                        <span>产地：<span>泉州</span></span>
+                                        <br>
+                                        <span>销量：<span>10</span></span>
+                                    </div>
+                                </div>
+                            </a>
+
+                            <a href="goodDetail.html">
+                                <div class="col-md-3 col-xs-6">
+                                    <div class="goods-border">
+                                        <div class="img-big-hidden">
+                                            <img src="images/20191020051017.jpg" class="img-responsive img-big" alt="" width="100%">
+                                        </div>
+                                        <div  class="goods" >
+                                            <span>￥40.0</span><img src="images/newgoods.png" height="20px" alt="">
+                                        </div>
+                                        <p>草莓干</p>
+                                        <span>产地：<span>泉州</span></span>
+                                        <br>
+                                        <span>销量：<span>0</span></span>
+                                    </div>
+                                </div>
+                            </a>
+
+                            <a href="goodDetail.html">
+                                <div class="col-md-3 col-xs-6">
+                                    <div class="goods-border">
+                                        <div class="img-big-hidden">
+                                            <img src="images/20193916083959.jpg" class="img-responsive img-big" alt="" width="100%">
+                                        </div>
+                                        <div  class="goods" >
+                                            <span>￥34</span><img src="images/newgoods.png" height="20px" alt="">
+                                        </div>
+                                        <p>牛轧糖</p>
+                                        <span>产地：<span>泉州</span></span>
+                                        <br>
+                                        <span>销量：<span>3539</span></span>
+                                    </div>
+                                </div>
+                            </a>
+
+                            <a href="goodDetail.html">
+                                <div class="col-md-3 col-xs-6">
+                                    <div class="goods-border">
+                                        <div class="img-big-hidden">
+                                            <img src="images/20193912053916.jpg" class="img-responsive img-big" alt="" width="100%">
+                                        </div>
+                                        <div  class="goods" >
+                                            <span>￥9.9</span><img src="images/newgoods.png" height="20px" alt="">
+                                        </div>
+                                        <p>红糖麻花</p>
+                                        <span>产地：<span>泉州</span></span>
+                                        <br>
+                                        <span>销量：<span>999</span></span>
+                                    </div>
+                                </div>
+                            </a>
+
+                        </div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane fade" id="messages">
+                        <div class="row">
+
+                            <a href="goodDetail.html">
+                                <div class="col-md-3 col-xs-6">
+                                    <div class="goods-border">
+                                        <div class="img-big-hidden">
+                                            <img src="images/20192820052815.jpg" class="img-responsive img-big" alt="" width="100%">
+                                        </div>
+                                        <div  class="goods" >
+                                            <span>￥29.9</span><img src="images/dis.png" height="20px" alt="">
+                                        </div>
+                                        <p>鱿鱼卷</p>
+                                        <span>产地：<span>泉州</span></span>
+                                        <br>
+                                        <span>销量：<span>20</span></span>
+                                    </div>
+                                </div>
+                            </a>
+
+                            <a href="goodDetail.html">
+                                <div class="col-md-3 col-xs-6">
+                                    <div class="goods-border">
+                                        <div class="img-big-hidden">
+                                            <img src="images/20192420052450.jpg" class="img-responsive img-big" alt="" width="100%">
+                                        </div>
+                                        <div  class="goods" >
+                                            <span>￥40</span><img src="images/dis.png" height="20px" alt="">
+                                        </div>
+                                        <p>小鱼仔</p>
+                                        <span>产地：<span>泉州</span></span>
+                                        <br>
+                                        <span>销量：<span>10</span></span>
+                                    </div>
+                                </div>
+                            </a>
+
+                            <a href="goodDetail.html">
+                                <div class="col-md-3 col-xs-6">
+                                    <div class="goods-border">
+                                        <div class="img-big-hidden">
+                                            <img src="images/20192616082640.jpg" class="img-responsive img-big" alt="" width="100%">
+                                        </div>
+                                        <div  class="goods" >
+                                            <span>￥36.9</span><img src="images/dis.png" height="20px" alt="">
+                                        </div>
+                                        <p>小黄鱼</p>
+                                        <span>产地：<span>泉州</span></span>
+                                        <br>
+                                        <span>销量：<span>6000</span></span>
+                                    </div>
+                                </div>
+                            </a>
+
+                            <a href="goodDetail.html">
+                                <div class="col-md-3 col-xs-6">
+                                    <div class="goods-border">
+                                        <div class="img-big-hidden">
+                                            <img src="images/20191512051508.jpg" class="img-responsive img-big" alt="" width="100%">
+                                        </div>
+                                        <div  class="goods" >
+                                            <span>￥29.91</span><img src="images/dis.png" height="20px" alt="">
+                                        </div>
+                                        <p>芒果脯</p>
+                                        <span>产地：<span>泉州</span></span>
+                                        <br>
+                                        <span>销量：<span>999</span></span>
+                                    </div>
+                                </div>
+                            </a>
+
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</selection>
+<!--content-->
+<div style="background: url('images/630.jpg') no-repeat; background-size: cover;min-height: 500px;position: relative">
+    <div class="container" >
+
+        <div class="row" style="margin-top: 15%;">
+            <div class="col-md-3">
+                <div class="content_div" align="center">
+                    <div>
+                        <img src="images/food.png" alt="">
+                    </div>
+                    <h3>配菜</h3>
+                </div>
+            </div>
+            <div class="col-md-3" >
+                <div class="content_div" align="center" style=" background-color:rgba(200,100,100,0.6);">
+                    <div>
+                        <img src="images/gd2.png" alt="">
+                    </div>
+                    <h3>休闲</h3>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div  class="content_div" align="center" style=" background-color:rgba(100,200,100,0.6);">
+                    <div>
+                        <img src="images/gam.png" alt="">
+                    </div>
+                    <h3>游戏</h3>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div  class="content_div" align="center" style=" background-color:rgba(200,100,150,0.6);">
+                    <div>
+                        <img src="images/mus.png" alt="">
+                    </div>
+                    <h3>音乐</h3>
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+</div>
+<!--团队介绍-->
+<section>
+    <!--    标题-->
+    <div class="title text-center">
+        <strong><h2>实力团队</h2></strong>
+        <div>
+            <p><i class="glyphicon glyphicon-star icon1"></i><i class="glyphicon glyphicon-star icon2"></i><i class="glyphicon glyphicon-star icon1"></i></p>
+        </div>
+
+    </div>
+    <!--    主要内容-->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 text-muted text-about title">
+                <div class="t"><img src="images/jie1.jpg" class="img-circle img-responsive jieimg" alt="Alternate Text" /></div>
+                <p></p>
+                <p>狼的力量来自于狼群， </p>
+                <p>狼群的力量来自于狼。</p>
+
+            </div>
+            <div class="col-md-4 text-muted text-about title">
+                <div><img src="images/jie2.jpg" class="img-circle img-responsive jieimg" alt="Alternate Text" /></div>
+
+                <p></p>
+                <p>低维的人生活法是单打独斗，</p>
+                <p>高维的人生活法是借力成事。</p>
+            </div>
+            <div class="col-md-4 text-muted text-about title">
+                <div><img src="images/timg.jpg" class="img-circle img-responsive jieimg" alt="Alternate Text" /></div>
+
+                <p></p>
+                <p> 我们的爱好是创业！</p>
+                <p> 我们的团队是梦想追求团队！</p>
+
+            </div>
+        </div>
+    </div>
+</section>
+<!--footer-->
+﻿<footer class="footer" style="">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-md-2 col-xs-5" style="padding-top: 8em">
+                <p>友情链接</p>
+                <p><a href="http://www.baidu.com" target="_blank">百度</a></p>
+                <p> <a href="http://taobao.com" target="_blank">淘宝</a></p>
+                <p><a href="http://jd.com" target="_blank">京东</a></p>
+            </div>
+            <div class="col-md-8 col-xs-7" style="padding-top: 8em">
+                <p> 版权： 地址：泉州市鲤城区南环路1129号 邮编：362000</p>
+                <a href="admin/login.aspx">后台</a>
+            </div>
+
+        </div>
+
+
+
+    </div>
+</footer>
+
+</body>
+</html>
+<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>

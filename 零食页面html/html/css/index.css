@@ -1,0 +1,268 @@
+
+    @font-face
+    {
+        font-family:myfont;
+        src:url('../bootstrap/fonts/华文楷体.ttf');
+           }
+*
+{ font-family: myfont;
+    /*方正舒体*/
+    font-size: 18px;
+}
+a:hover{
+    text-decoration: none;
+}
+
+/*二维码图片*/
+.about:hover #about_img{
+    display: block;
+    z-index: 9999;
+    position: absolute;
+    margin-top: -5px;
+}
+#about_img{
+    display: none;
+}
+.regist{
+    width: 120px;
+}
+
+.top-bar{
+    background: #ffffff;
+    border-bottom: #ceced2 1px solid;
+}
+.top-bar-1,.top-bar-2,.top-bar-3{
+    border-right: #ceced2 1px solid;
+    height: 30px;
+}
+/*导航栏logo的高度*/
+.navbar-brand{
+    height: 70px;
+    padding: 10px 10px;
+
+}
+/*导航栏的颜色*/
+.nav-index{
+    background: #fff;
+}
+/*导航栏a标签的高度*/
+#nav-ul a,#current a{
+    height: 70px;
+    line-height: 40px;
+}
+/*鼠标经过时导航栏*/
+#nav-ul .active,#nav-ul a:hover{
+    background-color: transparent;
+    border-bottom: #2aabd2 2px solid;
+
+}
+/*手机模式下切换按钮位置*/
+.navbar-toggle {
+
+    margin-top: 17px;
+
+}
+/*去除导航栏的底部外边距*/
+.navbar {
+    margin-bottom: 0px;
+
+}
+/*星星图片及关于我们的相对div居中*/
+.title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/*文本行距*/
+.text-about{
+    line-height: 30px;
+}
+/*星星字体图标*/
+.icon1{
+    font-size: 16px;
+    color:#ceced2;
+}
+.icon2{
+    font-size:22px;
+}
+.tabC{
+    background-color: #f0f0f0f0;
+    padding: 30px 0px;
+    margin-top:10px;
+}
+.tabC .nav{
+    font-size: 20px;
+}
+.tabC .nav a{
+    color: #999;
+    border: none;
+}
+.tabC .nav li .active{
+    background-color: transparent;
+}
+.tabC .nav  .active a,.tabC .nav li a:hover,.tabC .nav  a:focus {
+    color: #555;
+    cursor: default;
+    background:none;
+    border:none;
+    border-bottom: red 2px solid;
+}
+
+.tabC .nav>li.active>a, .tabC .nav a:focus, .tabC .nav li a:hover {
+    color: #555;
+    cursor: default;
+    background: none;
+    border: none;
+    border-bottom: red 2px solid;
+    color: #000;
+}
+.pt1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.pt1 h2{
+    color: 	#EE3B3B;
+}
+.goodslist{
+    margin-top: 10px;
+}
+
+.goodslist p,.goodslist span
+{
+
+    text-align: center;
+    font-size: 15px;
+
+}
+.goods span:first-child
+{
+    color: #F40;
+    font-size: 24px;
+
+}
+.goods-border{
+    border:solid 1px #d3d3d3;
+    text-align: center;
+    margin-top: 5px;
+
+}
+.goods-row{
+    padding: 0px 4px;
+}
+.goods{
+    text-align: center;
+}
+.img-big:hover{
+    transform: scale(1.2);
+    transition: all 1s;
+}
+.img-big-hidden{
+    overflow: hidden;
+}
+
+#bottom-nav>.active>a{
+    color: #333;
+    background-color:transparent;
+}
+.user{
+    border:solid 1px #d3d3d3;
+    margin-top: 10px;
+    padding: 10px 10px;
+}
+.usermoney{
+    display:block;
+    border:solid 1px #d3d3d3;
+    margin-top: 5px;
+}
+.usermoney div:first-child{
+    height: 70%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    color: green;
+    font-weight: bolder;
+}
+.usermoney div:last-child{
+    height: 30%;
+    text-align: center;
+    background: #999999;
+    color: #fff;
+}
+#a_001{
+    display: block;
+}
+.goods-border table tr td{
+    line-height: 50px;
+}
+#total_money
+{
+    display:none;}
+#moneyicon:hover{
+    cursor: pointer;
+}
+.youqing_link li{
+    list-style: none;
+    float: left;
+}
+#addr .title{
+    display: inline-block;
+}
+.shop_list_name{
+    text-align: center;background: url('../images/sub_top.gif') no-repeat;width: 200px;height: 43px;
+    color: #fff;
+}
+.shop_list{
+    text-align: center;background: url('../images/sub_bg.gif');width: 200px;
+    color: #fff;
+}
+.shop_list li{
+    padding: 20px;
+
+}
+.input_div{
+    padding: 10px;background-color: rgba(220,237,245,0.5);
+    width:280px;
+   
+}
+.input_div div{
+    margin: 20px 0px;
+    color: #fff;
+}
+.content_index{
+    margin-top: 30px;
+}
+.content_div{
+    background-color:rgba(100,100,100,0.6);
+    padding: 20px 5px;
+    margin-right:10px;
+}
+.content_div h3{
+    color: #fff;
+}
+.footer{
+    background:url('.././images/ftr-banner.jpg') no-repeat;background-size:cover;min-height: 300px;padding: 20px 0px;margin-top: 50px;
+}
+.footer div{
+    color: #Fff;
+}
+.goods_detalis strong{
+    font-size: 20px;
+}
+
+.jieimg:hover{ box-shadow:0px 0px 8px 0px #000;
+               
+               transform:rotatez(360deg);
+               transition: all 2s ease-out
+               }
+
+.jieimg{height:200px}
+.touxiang li
+{
+     list-style:none;
+     float:left;}
